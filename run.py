@@ -104,6 +104,7 @@ def play_game(word):
                 print('YELLOW CARD!! Please enter a LETTER.')
             elif guess in guessed_letters:
                 print("You already guessed this LETTER, better change tactics!!", guess)
+                print(guessed_letters)
             elif guess not in word:
                 print(guess, "is NOT in the word.") 
                 attempts -= 1
@@ -146,5 +147,7 @@ def main():
     while input("Play Again? (Y/N) ").upper() == "Y": 
         word = pick_word() 
         play_game(word) 
+
+
 if __name__ == "__main__": 
     main()
