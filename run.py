@@ -92,9 +92,9 @@ def play_game(word):
     guessed_words = []
     #max attempts player has to guess word
     attempts = 6
-    print("\n****Welcome to the World Cup 22 Edition of Hangman!****\n")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-    print("Try & guess the name of the team playing in the tournament\n")
+    print("\n*Welcome to the World Cup 22 Edition of Hangman!*\n")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+    print("Guess the name of the team playing in the World Cup\n")
     print(display_hangman(attempts))
     print(dashed_word)
     while not guessed and attempts > 0:
