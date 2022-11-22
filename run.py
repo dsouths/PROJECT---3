@@ -100,29 +100,39 @@ def play_game(word):
 
     while not guessed and attempts > 0:
         guess = input("Pick a letter or word: ").upper() 
-        if len(guess) != 1:
-            print('Please enter a single letter. YELLOW CARD!!')
-        elif guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
-            print('Please enter a LETTER.')
-        elif guess in guessed_letters:
-            print("You already guessed this LETTER, better change tactics!!", guess)
-        elif guess in guessed_words:
-            print("What a miss!! You already guessed this WORD!!", guess)
-        elif guess not in word:
-            print(guess, "is not in the word.") 
-            attempts -= 1
-            guessed_letters.append(guess)
+        if len(guess) == 1 and guess in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
+            if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
+                print('YELLOW CARD!! Please enter a LETTER.')
+            elif guess in guessed_letters:
+                print("You already guessed this LETTER, better change tactics!!", guess)
+            elif guess not in word:
+                print(guess, "is not in the word.") 
+                attempts -= 1
+                guessed_letters.append(guess)
+            else:
+                print("GGGGGOAL,", guess, "is in the word!")
+                guessed_letters.append(guess)
+                word_as_list = list(dashed_word)
+                indices = [i for i, letter in enumerate(word) if letter == guess]             
+                for index in indices: 
+                    word_as_list[index] = guess 
+                dashed_word = "".join(word_as_list) 
+                if "_" not in dashed_word: 
+                    guessed = True   
+        elif len(guess) == len(word) and guess in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
+            if guess == word:
+                print("YEP")
+            elif guess in guessed_words:
+                print("What a miss!! You already guessed this WORD!!", guess)
+            elif guess != word:
+                print("WHAT A MISS", guess, "is NOT the word!") 
+                tries -= 1 
+                guessed_words.append(guess)
+            else: 
+                guessed = True 
+                dashed_word = word
         else:
-            print("GGGGGOAL,", guess, "is in the word!")
-            guessed_letters.append(guess)
-            word_as_list = list(dashed_word)
-            indices = [i for i, letter in enumerate(word) if letter == guess]             
-            for index in indices: 
-                word_as_list[index] = guess 
-            dashed_word = "".join(word_as_list) 
-            if "_" not in dashed_word: 
-                guessed = True     
-            
+            print("NOT a valid guess!") 
         print(dashed_word) 
         print(display_hangman(attempts))
         print("\n")
@@ -130,7 +140,7 @@ def play_game(word):
     if guessed: 
         print("RESULT!!! You have won the match & guessed the word correctly! Olé Olé Olé...")
     else:
-        print("Sorry, you ran out of tries. The word was " + word + ". Better luck next time!")
+        print("Sorry, you ran out of tries & lost the match! The word was " + word + ". Better luck next time!")
     
 
 def main(): 
