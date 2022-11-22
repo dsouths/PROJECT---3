@@ -30,7 +30,7 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 -----
 Happy coding!
 
-<h1>HANGMAN</h1>
+<h1>HANGMAN World Cup 22 Edition</h1>
 
 <b>[Deployed Website]()</b>
 
@@ -55,9 +55,11 @@ I have created a WORLD CUP 22 HANGMAN game which utilizes Python, with the purpo
 I plan to include the following features:
 
   * _ is replaced with letter when correct letter is guessed
-  * only one letter at a time is valid guess e.g. a allowed / ae not allowed
+  * a guess of only one letter at a time is valid e.g. a allowed / ae not allowed
   * numbers are not a valid guess
-  *  
+  * with each wrong guess the hangman image/stage progresses until the game is over
+  * max attempts of six 
+  * game keeps track of guessed words & guessed letters & informs the player if they have already guessed them
  
 <h2>UX</h2>
  
