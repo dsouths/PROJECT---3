@@ -1,6 +1,6 @@
 import random
 
-word_list = ["Qatar", "Ecuador", "Senegal", "Netherlands", "England", "Iran", "USA", "Wales", "Argentina", "Saudi Arabia", "Mexico", "Poland", "France", "Australia", "Denmark", "Tunisia", "Spain", "Costa Rica", "Germany", "Japan", "Belgium", "Canada", "Morocco", "Croatia", "Brazil", "Serbia", "Switzerland", "Cameroon", "Portugal", "Ghana", "Uruguay", "South Korea"]
+word_list = ["Qatar", "Ecuador", "Senegal", "Netherlands", "England", "Iran", "USA", "Wales", "Argentina", "SaudiArabia", "Mexico", "Poland", "France", "Australia", "Denmark", "Tunisia", "Spain", "CostaRica", "Germany", "Japan", "Belgium", "Canada", "Morocco", "Croatia", "Brazil", "Serbia", "Switzerland", "Cameroon", "Portugal", "Ghana", "Uruguay", "SouthKorea"]
 def display_hangman(attempts):
         stages = [  # final state:
                 """ 
@@ -100,7 +100,17 @@ def play_game(word):
 
     while not guessed and attempts > 0:
         guess = input("Pick a letter or word: ").upper() 
-        if len(guess) == 1 and guess in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
+        if len(guess) == len(word) and guess.isalpha():
+            if guess in guessed_words:
+                print("What a miss!! You already guessed this WORD!!", guess)
+            elif guess != word:
+                print("WHAT A MISS", guess, "is NOT the word!") 
+                attempts -= 1 
+                guessed_words.append(guess)
+            else: 
+                guessed = True 
+                dashed_word = word
+        elif len(guess) == 1 and guess in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
             if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
                 print('YELLOW CARD!! Please enter a LETTER.')
             elif guess in guessed_letters:
@@ -119,23 +129,11 @@ def play_game(word):
                 dashed_word = "".join(word_as_list) 
                 if "_" not in dashed_word: 
                     guessed = True   
-        elif len(guess) == len(word) and guess in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
-            if guess == word:
-                print("YEP")
-            elif guess in guessed_words:
-                print("What a miss!! You already guessed this WORD!!", guess)
-            elif guess != word:
-                print("WHAT A MISS", guess, "is NOT the word!") 
-                tries -= 1 
-                guessed_words.append(guess)
-            else: 
-                guessed = True 
-                dashed_word = word
         else:
             print("NOT a valid guess!") 
         print(dashed_word) 
         print(display_hangman(attempts))
-        print("\n")
+        
     
     if guessed: 
         print("RESULT!!! You have won the match & guessed the word correctly! Olé Olé Olé...")
