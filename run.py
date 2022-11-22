@@ -83,40 +83,29 @@ def pick_word():
     
 #function to play game with chosen random word
 def play_game(word):
+    #replaces word with same amount of dashes as letters in word
+    dashed_word = "_" * len(word)
+    #keeps track of the game state
+    guessed = False
     #keeps track of the guessed letters & words
     guessed_letters = []
     guessed_words = []
-    #keeps track of the game state
-    guessed = False
-    #replaces word with same amount of dashes as letters in word
-    dashed_word = "_" * len(word)
     #max attempts player has to guess word
     attempts = 6
-    
-    print("\n*****************Welcome to the World Cup 22 Edition of Hangman!*****************\n")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
-    print("Kick off by guessing a letter & then the name of the team playing in the tournament\n")
+    print("\n****Welcome to the World Cup 22 Edition of Hangman!****\n")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+    print("Try & guess the name of the team playing in the tournament\n")
     print(display_hangman(attempts))
-
+    print(dashed_word)
     while not guessed and attempts > 0:
         guess = input("Pick a letter or word: ").upper() 
-        if len(guess) == len(word) and guess.isalpha():
-            if guess in guessed_words:
-                print("What a miss!! You already guessed this WORD!!", guess)
-            elif guess != word:
-                print("WHAT A MISS", guess, "is NOT the word!") 
-                attempts -= 1 
-                guessed_words.append(guess)
-            else: 
-                guessed = True 
-                dashed_word = word
-        elif len(guess) == 1 and guess in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
+        if len(guess) == 1 and guess.isalpha():
             if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
                 print('YELLOW CARD!! Please enter a LETTER.')
             elif guess in guessed_letters:
                 print("You already guessed this LETTER, better change tactics!!", guess)
             elif guess not in word:
-                print(guess, "is not in the word.") 
+                print(guess, "is NOT in the word.") 
                 attempts -= 1
                 guessed_letters.append(guess)
             else:
@@ -129,6 +118,16 @@ def play_game(word):
                 dashed_word = "".join(word_as_list) 
                 if "_" not in dashed_word: 
                     guessed = True   
+        elif len(guess) == len(word) and guess.isalpha():
+            if guess in guessed_words:
+                print("What a miss!! You already guessed this WORD!!", guess)
+            elif guess != word:
+                print("WHAT A MISS", guess, "is NOT the word!") 
+                attempts -= 1 
+                guessed_words.append(guess)
+            else: 
+                guessed = True 
+                dashed_word = word
         else:
             print("NOT a valid guess!") 
         print(dashed_word) 
