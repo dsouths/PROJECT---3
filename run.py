@@ -56,4 +56,75 @@ def play_game(word):
         print("Sorry, you ran out of tries. The word was " + word + ". Maybe next time!")
     
     def display_hangman(attempts):
-        
+        stages = [  # final state:
+                """ 
+                   -------- 
+                   |      | 
+                   |      O 
+                   |     \|/ 
+                   |      | 
+                   |     / \ 
+                   - 
+                """, 
+                # 5
+                """ 
+                   -------- 
+                   |      | 
+                   |      O 
+                   |     \|/ 
+                   |      | 
+                   |     /  
+                   - 
+                """, 
+                # 4
+                """ 
+                   -------- 
+                   |      | 
+                   |      O 
+                   |     \|/ 
+                   |      | 
+                   |       
+                   - 
+                """, 
+                # 3
+                """ 
+                   -------- 
+                   |      | 
+                   |      O 
+                   |     \| 
+                   |      | 
+                   |      
+                   - 
+                """, 
+                # 2
+                """ 
+                   -------- 
+                   |      | 
+                   |      O 
+                   |      | 
+                   |      | 
+                   |      
+                   - 
+                """, 
+                # 1 
+                """ 
+                   -------- 
+                   |      | 
+                   |      O 
+                   |     
+                   |       
+                   |      
+                   - 
+                """, 
+                # initial state 
+                """ 
+                   -------- 
+                   |      | 
+                   |       
+                   |     
+                   |       
+                   |      
+                   - 
+                """ 
+    ] 
+    return stages[attempts] 
