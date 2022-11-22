@@ -34,7 +34,7 @@ Happy coding!
 
 <b>[Deployed Website](https://hangman-worldcup22-edition.herokuapp.com/)</b>
 
-<b>[Github](https://)</b>
+<b>[Github]([https://](https://github.com/dsouths/PROJECT---3))</b>
 
 ![am i responsive]()
 
