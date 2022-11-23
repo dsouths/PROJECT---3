@@ -1,42 +1,11 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome dsouths,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+  
 
 <h1>HANGMAN World Cup 22 Edition</h1>
 
-<b>[Deployed Website](https://hangman-worldcup22-edition.herokuapp.com/)</b>
+Click for <b>[Deployed Website](https://hangman-worldcup22-edition.herokuapp.com/)</b>
 
-<b>[Github]([https://](https://github.com/dsouths/PROJECT---3))</b>
+Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
 
-![am i responsive]()
 
 <!--ts-->
    * [Intro](#intro)
@@ -47,77 +16,67 @@ Happy coding!
    * [Technologies Used](#technologies-used)
 <!--te-->
 
-
 <h2>Intro</h2>
-I have created a WORLD CUP 22 HANGMAN game which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with _ and the player has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The goal of the game is to enteratin the user & challenge them to guess the correct letters and ultimately country playing in the world cup 22.. 
+I have created a WORLD CUP 22 HANGMAN game which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with ~ and the player has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The goal of the game is to entertain the user & challenge them to guess the correct letters and ultimately correct country playing in the world cup 22.. 
 
 <h2>UX</h2>
  
 I plan to incorporate the following into the user experience (UX):
  * a game that is easy to understand, intuative & entertaining for the user
+ * the user can easily distinguish when the game is over & can easily restart the game to play again
  * the game should work without any bugs or faults  
 
 
 <h2>Features</h2>
+
 I plan to include the following features:
-  * _ is replaced with letter when correct letter is guessed
+  * ~ is replaced with letter when correct letter is guessed
   * a guess of only one letter at a time is valid e.g. a allowed / ae not allowed
   * numbers are not a valid guess
   * with each wrong guess the hangman image/stage progresses until the game is over
   * max attempts of six 
   * game keeps track of guessed words & guessed letters & informs the player if they have already guessed them
+ 
+In creating this game it gave me the opportunity to employ many aspects of Python I had covered on the Code Institute (CI) module. To enable me to create the features above I had to use the following within this project:
+  * <b>LISTS -</b> creating lists & importing the random function to randomly chose a word from the word list 
+  * <b>APPEND METHOD -</b> adding guessed letters & words into separate lists to keep track of guessed letters/words for player e.g. guessed_words.append(guess)
+  * <b>WHILE LOOPS -</b> the condition for while loop is boolean value "True", used to loop over the letters multiple times & keep asking theplayer to guess a letter (each time the player guessed a letter) until the "letters guessed" becomes true. A for loop was not  suitable here as it loops over data once.  The guessed letters/words are stored in the variable guessed_letters/words 
+  * <b>IF/ELIF/ELSE STATEMENTS</b> - including nested if/else statements. These were perfect for a hangman game as I required different outcomes depending on the user input e.g. if number was guessed/more than one letter guessed would be an invalid guess. They work by giving the instructions; if this is true, do this or if the next condition is true carry out this function, or if neither are true carry out a different function  
+  * <b>FUNCTIONS -</b> I used the following functions; 
+  
+  * def pick_word(): takes a list of strings & returns one string e.g. the word at random from word list 
+  * def play_game(word): is the main function of the game in determining the outcome of player choice. Also included game state if the guess if True or False
+  * def main(): this function calls to action the play_game(word) function & also includes a while loop to ask if the player wants to play again. This keeps the player engaged & increases likelihood player will play another game.
 
-<h3>Main Screen</h3>
-
-
-
-<h3>Media Queries</h3>
-
-I ensured the website would work on multiple screen sizes to ensure a smooth user experience irrespective of the device the user chose to use tablet, phone, desktop, etc. I did however chose a mobile first design & feel the game is optimal for mobile devices...entertainment & fun on the go  
+ 
 
 <h2>Validation Checks</h2>
-
-<b>W3c Html Validation service</b>
-
-
-<b>Wev Dev Tools Chrome</b>
-
-I used web dev tools in chrome to access the quality & accessibility of the webpage. It gave me insight into how the RockPaperScissors website performed & scored highly in Performance, Accessibility, Best Practices & SEO for both desktop & mobile devices
-
-<b>Mobile Devices</b>
-
-![lighthouse 1 ](https://user-images.githubusercontent.com/105642587/193277827-ce4090be-d69e-435d-b242-2fe1f1e3eb22.jpg)
-
-<b>Desktop devices</b>
-
-Initially the SEO was resulting in score of 89
-
-![lighthouse desktop](https://user-images.githubusercontent.com/105642587/193277836-6eae1716-2487-4566-9383-d801ce09cb2e.jpg)
-
-I added in meta descriptions within HTML header as per advice from lighthouse guidance & increased the score to 100 (seen below)
-
-![lighthouse desktop 2](https://user-images.githubusercontent.com/105642587/196782302-9989e111-54fe-4c5d-b5d4-4905cd97af04.jpg)
 
 
 <h2>Bugs</h2>
 
-<b>Deployed website would not function - </b> Issue with relative & absolute file path for javascript file "app.js", would work with gitpod website preview using:
-<script src="assets/app.js"></script>  
+<b>Letter "W" was coming up as an invalid entry - </b> I had not included it & had incorrectly typed "E" in it's place within the if statement "if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':". I amended this which fixed the issue
 
-but would not function on deployed website. For javascript file to load correctly I changed to absolute file path  
-<script src="/rockpaperscissors---P2/assets/app.js"></script>
-<hr>
-<b>Issue with gameOver function - </b> I had issues with getting game to stop when user or computer reached max_points (set to 10 in this example).I overcame this by setting a variable as "let isGameover = false;". Then adding isGameOver function into the game() function. So if isGameOver function is false then play the game. Within the game function the gameOver function was included to run with statements defined within the function gameOver() with an else if statement. These determined the conditions for who won, the user or computer or if the game was drawn. The code was executed if the conditions were true, i.e.
+![image](https://user-images.githubusercontent.com/105642587/203580749-674317f3-069a-46dc-8ad4-265dae652cdb.png)
+
+<b>Hangman stages not printing - </b> I had placed the hangman stages/images within a function, making them a local variable. When calling display_hangman outside of the function this was giving the error "local variable referenced before assignment". I moved the hangman stages variable outside of the function  to the start of the code, making them a global variable, which allowed me to call on them within the play_game() function.
+
+![image](https://user-images.githubusercontent.com/105642587/203581900-65a0b41c-3486-4e6b-8c51-3ddf520e368e.png)
+
+<b>Hangman stages appearing in wrong order - </b> I placed the display_hangman stages in the wrong order. I have attempts set  
+
+![image](https://user-images.githubusercontent.com/105642587/203602251-8b61d914-3caa-405c-a7cd-c732e68810d8.png)
+
+
+
 <br>
-
-
 <hr>
-<b>Restart button only appearing when game was over - </b> I initially had this as display:none within CSS but this did not work. I overcame this issue by including CSS styling rules within the gameOver function: 
+
 
   
 <h2>Deployment</h2>
 
-The website was deployed on GitHub by using following steps:
+The website was deployed on Heroku via GitHub by using following steps:
 
 <ol>
 <li>Login into GitHub and locate the repository - pharmacy </li>
@@ -133,18 +92,13 @@ The website was deployed on GitHub by using following steps:
   
 <h2>Technologies Used</h2>
 
-* HTML
-* CSS
-* Javascript
+* Python
 
 <h3>Tools</h3>
 
 * [Git hub](https://github.com/)
 * [Git pod](https://www.gitpod.io/docs/configure/)
-* [W3c Html Validation service](https://validator.w3.org/)
-* [W3c Css Validation service](https://jigsaw.w3.org/css-validator/)
-* [JSHint JavaScript Validator](https://jshint.com/)
-* [WebDev Checker](https://web.dev/measure/)
+* [Heroku](https://dashboard.heroku.com/)
 * [Am I Responsive](https://ui.dev/amiresponsive)
 * [Stack OverFlow](https://stackoverflow.com/)
 * [Evernote](https://evernote.com/)
@@ -160,7 +114,6 @@ The website was deployed on GitHub by using following steps:
 
 * <b>martina_mentor - </b>my mentor Martina who was always on hand to answer any questions
 * <b>Code Institute Channel on Slack - </b> I found this a great resource with many knowledgeable people who were more than willing to answer my questions & help out.
-* <b>[GeeksForGeeks](https://www.geeksforgeeks.org/) - </b>useful resource to see worked examples to improve my understanding of JavaScript syntax & functions
 * <b>Youtube</b> - I found a number of tutorials on youtube useful in helping me understand 
 
 <h3>Final Note</h3>
