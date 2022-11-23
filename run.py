@@ -84,7 +84,7 @@ def pick_word():
 #function to play game with chosen random word
 def play_game(word):
     #replaces word with same amount of dashes as letters in word
-    dashed_word = "_" * len(word)
+    dashed_word = "~" * len(word)
     #keeps track of the game state
     guessed = False
     #keeps track of the guessed letters & words
@@ -117,7 +117,7 @@ def play_game(word):
                 for index in indices: 
                     word_as_list[index] = guess 
                 dashed_word = "".join(word_as_list) 
-                if "_" not in dashed_word: 
+                if "~" not in dashed_word: 
                     guessed = True   
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
