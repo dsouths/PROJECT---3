@@ -4,7 +4,7 @@ from hangman import display_hangman
 word_list = ["Qatar", "Ecuador", "Senegal", "Netherlands", "England", "Iran", "USA", "Wales", "Argentina", "SaudiArabia", "Mexico", "Poland", "France", "Australia", "Denmark", "Tunisia", "Spain", "CostaRica", "Germany", "Japan", "Belgium", "Canada", "Morocco", "Croatia", "Brazil", "Serbia", "Switzerland", "Cameroon", "Portugal", "Ghana", "Uruguay", "SouthKorea"]
 
 
-# this function returns a random word from the word list & returns upper case to stop upper/lower case errors occuring later
+# function returns a random word from the word list & in upper
 def pick_word():
     word = random.choice(word_list)
     return word.upper()
@@ -45,28 +45,28 @@ def play_game(word):
                 word_as_list = list(dashed_word)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
                 for index in indices:
-                    word_as_list[index] = guess 
-                dashed_word = "".join(word_as_list)  
+                    word_as_list[index] = guess
+                dashed_word = "".join(word_as_list)
                 if "~" not in dashed_word:
-                    guessed = True   
+                    guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
-                print("What a miss!! You already guessed this WORD!!", guess)
+                print(f"What a miss!! You already guessed this WORD!! {guess}")
             elif guess != word:
-                print("WHAT A MISS", guess, "is NOT the word!")
+                print("WHAT A MISS {guess}, is NOT the word!")
                 attempts -= 1
                 guessed_words.append(guess)
             else:
                 guessed = True
                 dashed_word = word
         else:
-            print("NOT a valid guess!") 
-        print(dashed_word) 
-        print(display_hangman(attempts))       
-    if guessed: 
-        print("RESULT!!! You have won the match & guessed the word correctly! Olé Olé Olé...")
+            print("NOT a valid guess!")
+        print(dashed_word)
+        print(display_hangman(attempts))
+    if guessed:
+        print("RESULT!!! You guessed the word correctly! Olé Olé Olé...")
     else:
-        print(f"Sorry, you ran out of tries & lost the match! The word was {word}. Better luck next time!")
+        print(f"You ran out of tries & lost the match! The word was {word}!")
 
 
 def main():
