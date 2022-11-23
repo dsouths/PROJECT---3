@@ -1,6 +1,7 @@
 import random
 
 word_list = ["Qatar", "Ecuador", "Senegal", "Netherlands", "England", "Iran", "USA", "Wales", "Argentina", "SaudiArabia", "Mexico", "Poland", "France", "Australia", "Denmark", "Tunisia", "Spain", "CostaRica", "Germany", "Japan", "Belgium", "Canada", "Morocco", "Croatia", "Brazil", "Serbia", "Switzerland", "Cameroon", "Portugal", "Ghana", "Uruguay", "SouthKorea"]
+
 def display_hangman(attempts):
         stages = [  # final state:
                 """ 
@@ -75,7 +76,6 @@ def display_hangman(attempts):
     ] 
         return stages[attempts] 
 
-
 #this function returns a random word from the word list & returns upper case to stop upper/lower case errors occuring later
 def pick_word():
     word = random.choice(word_list)
@@ -100,13 +100,14 @@ def play_game(word):
     while not guessed and attempts > 0:
         guess = input("Pick a letter or word: ").upper() 
         if len(guess) == 1 and guess.isalpha():
-            if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':
+            if guess not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
                 print('YELLOW CARD!! Please enter a LETTER.')
             elif guess in guessed_letters:
                 print("You already guessed this LETTER, better change tactics!!", guess)
                 print(guessed_letters)
             elif guess not in word:
                 print(guess, "is NOT in the word.") 
+                print(guessed_words)
                 attempts -= 1
                 guessed_letters.append(guess)
             else:
@@ -116,7 +117,7 @@ def play_game(word):
                 indices = [i for i, letter in enumerate(word) if letter == guess]             
                 for index in indices: 
                     word_as_list[index] = guess 
-                dashed_word = "".join(word_as_list) 
+                dashed_word = "".join(word_as_list)     
                 if "~" not in dashed_word: 
                     guessed = True   
         elif len(guess) == len(word) and guess.isalpha():
@@ -140,14 +141,12 @@ def play_game(word):
     else:
         print("Sorry, you ran out of tries & lost the match! The word was " + word + ". Better luck next time!")
     
-
 def main(): 
     word = pick_word() 
     play_game(word) 
     while input("Play Again? (Y/N) ").upper() == "Y": 
         word = pick_word() 
         play_game(word) 
-
 
 if __name__ == "__main__": 
     main()
