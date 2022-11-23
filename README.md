@@ -55,12 +55,18 @@ In creating this game it gave me the opportunity to employ many aspects of Pytho
 
 <h2>Bugs</h2>
 
-<b>Letter "W" was coming up as an invalid entry - </b> I had not included it in the if statement "if guess not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':". I amended this which fixed the issue
+<b>Letter "W" was coming up as an invalid entry - </b> I had not included it & had incorrectly typed "E" in it's place within the if statement "if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':". I amended this which fixed the issue
 
 ![image](https://user-images.githubusercontent.com/105642587/203580749-674317f3-069a-46dc-8ad4-265dae652cdb.png)
 
-<b>Hangman stages not printing - </b> I had placed the hangman stages/images within a function, making them a local variable. When calling display_hangman outside of the function this was giving the error "local variable referenced before assignment". I moved the hangman stages vaariable outside of the function to the start of the code which allowed me to call on them within the play_game() function.
+<b>Hangman stages not printing - </b> I had placed the hangman stages/images within a function, making them a local variable. When calling display_hangman outside of the function this was giving the error "local variable referenced before assignment". I moved the hangman stages variable outside of the function  to the start of the code, making them a global variable, which allowed me to call on them within the play_game() function.
+
 ![image](https://user-images.githubusercontent.com/105642587/203581900-65a0b41c-3486-4e6b-8c51-3ddf520e368e.png)
+
+<b>Hangman stages appearing in wrong order - </b> I placed the display_hangman stages in the wrong order. I have attempts set  
+
+![image](https://user-images.githubusercontent.com/105642587/203602251-8b61d914-3caa-405c-a7cd-c732e68810d8.png)
+
 
 
 <br>
