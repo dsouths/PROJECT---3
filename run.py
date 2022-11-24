@@ -1,20 +1,6 @@
 import random
-import gspread
-import google.oauth2.service.account import Credentials
 from hangman import display_hangman
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-    ]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('words')
-
-word_list = SHEET.worksheet("word_list")
+from words import word_list
 
 
 # function returns a random word from the word list & in upper
@@ -56,8 +42,8 @@ def play_game(word):
                 print("GGGGGOAL,", guess, "is in the word!")
                 guessed_letters.append(guess)
                 word_as_list = list(dashed_word)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
-                for index in indices:
+                indc = [i for i, letter in enumerate(word) if letter == guess]
+                for index in indc:
                     word_as_list[index] = guess
                 dashed_word = "".join(word_as_list)
                 if "~" not in dashed_word:
