@@ -11,7 +11,7 @@ Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
    * [Intro](#intro)
    * [UX](#ux)
    * [Features](#features)
-   * [Validation Checks](#validation-checks)
+   * [Validation](#validation)
    * [Bugs](#bugs)
    * [Improvements](#improvements)
    * [Technologies Used](#technologies-used)
@@ -22,9 +22,15 @@ I have created a WORLD CUP 22 HANGMAN game which utilizes Python, with the purpo
 
 <h2>UX</h2>
  
-I plan to incorporate the following into the user experience (UX):
+As a player of hangman I want to guess letters so that I can complete the word & guess it before the final hangman stage, to win the game. 
+
+I plan to incorporate the following into the user experience (UX) to help achieve this:
  * a game that is easy to understand, intuative & entertaining for the user
  * the user can easily distinguish when the game is over & can easily restart the game to play again
+ * when the game begins the letters appear as "~" to indicate how many letters are in the word
+ * when the correct letter is guessed it appears in the word & the dashed word is update with the guess letters
+ * the player can guess a word 
+ * validation within the game to stop the user from guessing numbers or two or more letters incorrectly while still allowing player to guess the word
  * the game should work without any bugs or faults  
 
 
@@ -49,9 +55,7 @@ In creating this game it gave me the opportunity to employ many aspects of Pytho
   * def play_game(word): is the main function of the game in determining the outcome of player choice. Also included game state if the guess if True or False
   * def main(): this function calls to action the play_game(word) function & also includes a while loop to ask if the player wants to play again. This keeps the player engaged & increases likelihood player will play another game.
 
- 
-
-<h2>Validation Checks</h2>
+<h2>Validation</h2>
 
 Using the CI Pep8 validator on Gitpod as per CI slack channel (as below):
 
@@ -62,6 +66,8 @@ Using the CI Pep8 validator on Gitpod as per CI slack channel (as below):
 ![Screenshot_20221125_105631](https://user-images.githubusercontent.com/105642587/203970229-57a429dd-0b05-43ac-a2b2-52ee70fbc8fe.png)
 
 I fixed a lot of the issues which included, trailing whitespace, lines too long (>79 characters) & spacing issues. Using the PEP8 rules improved the readibility of my code.    
+
+I have also tested the deployed website by 
 
 <h2>Bugs</h2>
 
@@ -133,11 +139,12 @@ The website was deployed on Heroku via GitHub by using following steps:
 
 * <b>martina_mentor - </b>my mentor Martina who was always on hand to answer any questions
 * <b>Code Institute Channel on Slack - </b> I found this a great resource with many knowledgeable people who were more than willing to answer my questions & help out.
-* <b>Youtube</b> - I found a number of tutorials on youtube useful in helping me understand the structure & syntax of Python. I used these as a basis for my project & built my World Cup 22 edition around this. They were helpful in understanding functions, while loops, lists & list methods. 
+* <b>Youtube</b> - I found a number of tutorials on youtube useful in helping me understand the structure & syntax of Python, including those by MikhailLenko, Kite, 
+Shaun Halverson, MJ Codes & Kylie Ying.  I used these as a basis for my project & built my World Cup 22 edition around this. They were helpful in understanding functions, while loops, lists & list methods such as append. 
 
 <h3>Final Note</h3>
 
-I found this project to be particularly challenging, even more so than HTML & CSS. It was rewarding when functions worked correctly but was very frustrating when bugs appeared or functions would not work correctly. Through perseverance & the aid of my colleagues in the code institute slack channel, reviewing the Javascript module from Code Institute numerous times,  my mentor Martina, stack overflow threads & youtube tutorials I was able to improve my understanding of Javascript structure, functions & syntax. I hope to build on the skills I have developed & realise I can improve my knowledge futher by continuing to build other projects, which I plan to do.
+I found this project challenging, as it was my first experience with Python.  Through perseverance & the aid of my colleagues in the code institute slack channel, reviewing the Python module from Code Institute numerous times,  my mentor Martina, stack overflow threads & youtube tutorials I was able to improve my understanding of Python structure, functions & syntax. I hope to build on the skills I have developed & realise I can improve my knowledge futher by continuing to build other projects, which I plan to do.
 
 Thank you
 
