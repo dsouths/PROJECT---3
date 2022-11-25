@@ -19,7 +19,7 @@ chosen_word = SHEET.worksheet('words')
 words_list = chosen_word.get_all_values()
 word = ""
 
-
+# code based on youtube tutorial by Kite & MikhailLenko (accredited in readme)
 # function returns a random word from the word list & in upper
 def pick_word():
     word = random.choice(words_list)
