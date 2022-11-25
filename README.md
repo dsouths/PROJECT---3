@@ -19,7 +19,7 @@ Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
 
 <h2>Intro</h2>
 
-I have created a WORLD CUP 22 edition of the classic game Hangman, which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with ~ and the player has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The goal of the game is to entertain the user & challenge them to guess the correct letters and ultimately correct country playing in the world cup 22.. 
+I have created a WORLD CUP 22 edition of the classic game Hangman, which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with ~ and the player/user has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The goal of the game is to entertain the user & challenge them to guess the correct letters and ultimately correct country playing in the world cup 22.. 
 
 <h2>UX</h2>
  
@@ -61,12 +61,12 @@ I chose to use a World Cup 22 to separate the hangman game from the many others 
 
 <b>A validation checker to ensure only one letter or the word is guessed e.g. will not allow numbers of multiple letters to be guessed:</b>
 
-![image](https://user-images.githubusercontent.com/105642587/203986294-bbcb516c-024f-4fba-8938-a420f78c700e.png)
+![image](https://user-images.githubusercontent.com/105642587/203988874-e141de42-65bc-4a79-a490-1bb896e22e18.png)
 
  
 In creating this game it gave me the opportunity to employ many aspects of Python I had covered on the Code Institute (CI) module. To enable me to create the features above I had to use the following within this project:
   * <b>LISTS -</b> creating lists & importing the random function to randomly chose a word from the word list 
-  * <b>APPEND METHOD -</b> adding guessed letters & words into separate lists to keep track of guessed letters/words for player e.g. guessed_words.append(guess)
+  * <b>APPEND METHOD -</b> adding guessed letters & words into separate lists to keep track of guessed letters/words for player e.g. guessed_letters.append(guess)
   * <b>WHILE LOOPS -</b> the condition for while loop is boolean value "True", used to loop over the letters multiple times & keep asking theplayer to guess a letter (each time the player guessed a letter) until the "letters guessed" becomes true. A for loop was not  suitable here as it loops over data once.  The guessed letters/words are stored in the variable guessed_letters/words 
   * <b>IF/ELIF/ELSE STATEMENTS</b> - including nested if/else statements. These were perfect for a hangman game as I required different outcomes depending on the user input e.g. if number was guessed/more than one letter guessed would be an invalid guess. They work by giving the instructions; if this is true, do this or if the next condition is true carry out this function, or if neither are true carry out a different function  
   * <b>FUNCTIONS -</b> I used the following functions; 
@@ -88,6 +88,10 @@ Using the CI Pep8 validator on Gitpod as per CI slack channel (as below):
 I fixed a lot of the issues which included, trailing whitespace, lines too long (>79 characters) & spacing issues. Using the PEP8 rules improved the readibility of my code.    
 
 I have also tested the deployed website by purposefully entering incorrect data to ensure validation is working correctly, & it is. 
+
+![image](https://user-images.githubusercontent.com/105642587/203988874-e141de42-65bc-4a79-a490-1bb896e22e18.png)
+
+![image](https://user-images.githubusercontent.com/105642587/203985985-f46461b3-4cd2-461d-8488-eb832482182c.png)
 
 <h2>Bugs</h2>
 
@@ -145,9 +149,9 @@ The website was deployed on Heroku via GitHub by using following steps:
 
 <h3>Credits/References</h3>
 
-<li><b>Code Institute (https://learn.codeinstitute.net/dashboard) - </b> giving me the knowledge & skills to develop this project</li>
-<li><b>W3 Schools (https://www.w3schools.com/) - </b>clearing up some function queries I had</li>
-<li><b>Stack Overflow (https://stackoverflow.com/) - </b>another extremely useful resource I used to research bugs throughout the project</li>
+<li> <b>Code Institute - </b> giving me the knowledge & skills to develop this project</li>
+<li> <b>W3 Schools - </b>clearing up some function queries I had</li>
+<li> <b>Stack Overflow - </b>another extremely useful resource I used to research bugs throughout the project</li>
 
 <h3>Acknowledgements</h3>
 
