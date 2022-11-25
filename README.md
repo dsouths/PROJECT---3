@@ -23,7 +23,7 @@ Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
 
 <h2>Intro</h2>
 
-I have created a WORLD CUP 22 edition of the classic game Hangman, which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with ~ and the player/user has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The goal of the game is to entertain the user & challenge them to guess the correct letters and ultimately correct country playing in the world cup 22.. 
+I have created a WORLD CUP 22 edition of the classic game Hangman, which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with ~ and the player/user has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The "goal" of the game is to entertain the user & challenge them to guess the correct letters and ultimately correct country playing in the world cup 22.. 
 
 <h2>UX</h2>
  
