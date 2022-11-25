@@ -111,13 +111,17 @@ I have also tested the deployed website by purposefully entering incorrect data 
 
 ![image](https://user-images.githubusercontent.com/105642587/203602251-8b61d914-3caa-405c-a7cd-c732e68810d8.png)
 
+<b>Importing words from Google Sheets - </b> I was having issues pulling a random words from the list on the google sheet. I followed the walkthrough love sandwiches which helped me through these issues. Initially I had the words list in a separate words.py file but decided to utilize the skills developed from love sandwiches walkthrough & use google sheets to host the list of words for hangman game. I ensured credentials (creds.json) where placed in the gitignore file to stop sensitive data being pushed to github, as per the Love Sandwiches walkthrough project.
+
+![image](https://user-images.githubusercontent.com/105642587/203996385-cee25628-2f1b-478b-a3b0-b6c89a63c7fc.png)
+
 <h2>Media Queries</h2>
 
 As this is a command line interface on a mock terminal there is less need for reponsive design. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
 
 <h2>Improvements</h2>
 
-To improve on the game I would like to add complexity to the game & add a difficulty level function to the game. I would include easy, medium & difficult words to challenge the user. 
+To improve on the game I would like to add more complexity to the game & add a difficulty level function to the game. I would include easy, medium & difficult words to challenge the user. 
 
 <h2>Deployment</h2>
 
