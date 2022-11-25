@@ -23,7 +23,7 @@ Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
 
 <h2>Intro</h2>
 
-I have created a WORLD CUP 22 edition of the classic game Hangman, which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with ~ and the player/user has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The goal of the game is to entertain the user & challenge them to guess the correct letters and ultimately correct country playing in the world cup 22.. 
+I have created a WORLD CUP 22 edition of the classic game Hangman, which utilizes Python, with the purpose of the project to showcase the skills I have learned in the latest Code Institute module, Python. The game choses a word/country at random from the predetermined list of words/countries (playing in the World Cup 22), then replaces the letters with ~ and the player/user has a number of turns to pick the correct letters & then guess the word before the final hangman stage. The "goal" of the game is to entertain the user & challenge them to guess the correct letters and ultimately correct country playing in the world cup 22.. 
 
 <h2>UX</h2>
  
@@ -49,7 +49,7 @@ I plan to include the following features:
   * max attempts of six 
   * game keeps track of guessed words & guessed letters & informs the player if they have already guessed them
 
-I chose to use a World Cup 22 to separate the hangman game from the many others out there & help create a positive emotional response with the player, & ultimately make the game more fun & entertaining.  Print statements are given when: 
+I have chosen a World Cup 22 theme to separate the hangman game from the many others out there & help create a positive emotional response with the player, & ultimately make the game more fun & entertaining.  Print statements are given when: 
 
 <b>A correct letter is guessed: </b>
 
@@ -97,6 +97,10 @@ I have also tested the deployed website by purposefully entering incorrect data 
 
 ![image](https://user-images.githubusercontent.com/105642587/203985985-f46461b3-4cd2-461d-8488-eb832482182c.png)
 
+<h2>Media Queries</h2>
+
+As this is a command line interface on a mock terminal there is less scope for reponsive design than my last two projects, using Javascript/CSS & HTML. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
+
 <h2>Bugs</h2>
 
 <b>Letter "W" was coming up as an invalid entry - </b> I had not included it & had incorrectly typed "E" in it's place within the if statement "if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':". I amended this which fixed the issue
@@ -115,9 +119,8 @@ I have also tested the deployed website by purposefully entering incorrect data 
 
 ![image](https://user-images.githubusercontent.com/105642587/203996385-cee25628-2f1b-478b-a3b0-b6c89a63c7fc.png)
 
-<h2>Media Queries</h2>
+<b>Issue with importing gspread when deploying to Heroku - </b> The deployed command line interface on Heroku was not functioning & could not import spread function. It became apparent that I had not completed the requirements.txt file or added the credentials info from the cred.json file to Heroku so it could not pull the data from the google sheet. After reviewing the love sandwiches walk through I figured out I had missed this & reconfigured the settings. This solved the issue...phew! 
 
-As this is a command line interface on a mock terminal there is less need for reponsive design. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
 
 <h2>Improvements</h2>
 
