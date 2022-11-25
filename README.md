@@ -97,6 +97,10 @@ I have also tested the deployed website by purposefully entering incorrect data 
 
 ![image](https://user-images.githubusercontent.com/105642587/203985985-f46461b3-4cd2-461d-8488-eb832482182c.png)
 
+<h2>Media Queries</h2>
+
+As this is a command line interface on a mock terminal there is less need for reponsive design. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
+
 <h2>Bugs</h2>
 
 <b>Letter "W" was coming up as an invalid entry - </b> I had not included it & had incorrectly typed "E" in it's place within the if statement "if guess not in 'ABCDEFGHIJKLMNOPQRSTUVEXYZ':". I amended this which fixed the issue
@@ -115,9 +119,8 @@ I have also tested the deployed website by purposefully entering incorrect data 
 
 ![image](https://user-images.githubusercontent.com/105642587/203996385-cee25628-2f1b-478b-a3b0-b6c89a63c7fc.png)
 
-<h2>Media Queries</h2>
+<b>Issue with importing gspread when deploying to Heroku - </b> The deployed command line interface on Heroku was not functioning & could not import spread function. It became apparent that I had not completed the requirements.txt file or added the credentials info from the cred.json file to Heroku so it could not pull the data from the google sheet. After reviewing the love sandwiches walk through I figured out I had missed this & reconfigured the settings. This solved the issue...phew! 
 
-As this is a command line interface on a mock terminal there is less need for reponsive design. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
 
 <h2>Improvements</h2>
 
