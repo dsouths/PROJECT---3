@@ -1,19 +1,36 @@
 import random
 from hangman import display_hangman
-from words import word_list
+import gspread
+from google.oauth2.service_account import Credentials
+
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('hangman_words')
+chosen_word = SHEET.worksheet('words')
+
+words_data = chosen_word.get_all_values()
+word = ""
 
 
 # function returns a random word from the word list & in upper
 def pick_word():
-    word = random.choice(word_list)
-    return word.upper()
+    word = random.choice(words_data)
+    return word[0].upper()
 
 
 # function to play game with chosen random word
 def play_game(word):
     # replaces word with same amount of dashes as letters in word
     dashed_word = "~" * len(word)
-    # keeps track of the game state
+    # keeps track of the game state is answer guessed or not
     guessed = False
     # keeps track of the guessed letters & words
     guessed_letters = []
@@ -25,6 +42,7 @@ def play_game(word):
     print("Guess the name of the team playing in the World Cup\n")
     print(display_hangman(attempts))
     print(dashed_word)
+    # while loop gives options of what happens depending on answer given
     while not guessed and attempts > 0:
         guess = input("Pick a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
