@@ -13,6 +13,7 @@ Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
    * [Features](#features)
    * [Validation Checks](#validation-checks)
    * [Bugs](#bugs)
+   * [Improvements](#improvements)
    * [Technologies Used](#technologies-used)
 <!--te-->
 
@@ -52,6 +53,15 @@ In creating this game it gave me the opportunity to employ many aspects of Pytho
 
 <h2>Validation Checks</h2>
 
+Using the CI Pep8 validator on Gitpod as per CI slack channel (as below):
+
+![image](https://user-images.githubusercontent.com/105642587/203642414-3142dbf0-ec42-4322-ac49-1cef67ba6612.png)
+
+![image](https://user-images.githubusercontent.com/105642587/203642292-4bc7462e-c565-4180-a653-e6e9ac3cb4f0.png)
+
+![Screenshot_20221125_105631](https://user-images.githubusercontent.com/105642587/203970229-57a429dd-0b05-43ac-a2b2-52ee70fbc8fe.png)
+
+I fixed a lot of the issues which included, trailing whitespace, lines too long (>79 characters) & spacing issues. Using the PEP8 rules improved the readibility of my code.    
 
 <h2>Bugs</h2>
 
@@ -67,6 +77,7 @@ In creating this game it gave me the opportunity to employ many aspects of Pytho
 
 ![image](https://user-images.githubusercontent.com/105642587/203602251-8b61d914-3caa-405c-a7cd-c732e68810d8.png)
 
+<h2>Improvements</h2>
 
 
 <br>
@@ -79,16 +90,24 @@ In creating this game it gave me the opportunity to employ many aspects of Pytho
 The website was deployed on Heroku via GitHub by using following steps:
 
 <ol>
-<li>Login into GitHub and locate the repository - pharmacy </li>
-<li>At the top of repository locate the "settings" button and click on it </li>
-<li>On the left sidebar find locate the "pages" button and click on it</li>
-<li>Click on the branch dropdown menu and select: master</li>
-<li>Click save</li>
-<li>Link to your deployed repository appears</li>
-
-
-
+<li>Login into GitHub</li>
+<li>Sign up & activate Heroku account </li>
+<li>Create app & configure settings including adding buildpacks 
+<li>Ensure GitHub is connected by logging into GitHub & accepting prompts to link Heroku account with GitHub</li>
+<li>Set manual or automatic deployment. I set to automatic so any changes made to my repository are updated on Heroku. Click on "deploy branch"</li>
+<li>Test deployed webpage to ensure it works correctly. CLick on open app to open deployed webpage</li>
 </ol>
+
+![Screenshot_20221125_112945](https://user-images.githubusercontent.com/105642587/203976604-694bdc11-5800-4a3f-88a2-e7669bd3fbd6.png)
+
+![image](https://user-images.githubusercontent.com/105642587/203976832-2b29cc9e-c19f-4441-8838-ab380bf2cdb5.png)
+
+![image](https://user-images.githubusercontent.com/105642587/203977558-271853f1-f246-4d57-9882-34961ae0fdbe.png)
+
+![image](https://user-images.githubusercontent.com/105642587/203977927-411c3c2e-ca5a-4aa7-ab9b-8291bfa00a86.png)
+
+![image](https://user-images.githubusercontent.com/105642587/203977961-2d4f61f2-22e0-48fe-89d9-95aa07a4d9f5.png)
+
   
 <h2>Technologies Used</h2>
 
@@ -106,15 +125,15 @@ The website was deployed on Heroku via GitHub by using following steps:
 
 <h3>Credits/References</h3>
 
-<li><b>Code Institute - </b>giving me the knowledge & skills to develop this project</li>
+<li><b>Code Institute - </b> giving me the knowledge & skills to develop this project</li>
 <li><b>W3 Schools (https://www.w3schools.com/) - </b>clearing up some function queries I had</li>
-<li><b>Stack Overflow - </b>another extremely useful resource I used to rectify many issues with my code throughout the project including how to make my game end when getting to max amount of points</li>
+<li><b>Stack Overflow - </b>another extremely useful resource I used to research bugs throughout the project</li>
 
 <h3>Acknowledgements</h3>
 
 * <b>martina_mentor - </b>my mentor Martina who was always on hand to answer any questions
 * <b>Code Institute Channel on Slack - </b> I found this a great resource with many knowledgeable people who were more than willing to answer my questions & help out.
-* <b>Youtube</b> - I found a number of tutorials on youtube useful in helping me understand 
+* <b>Youtube</b> - I found a number of tutorials on youtube useful in helping me understand the structure & syntax of Python. I used these as a basis for my project & built my World Cup 22 edition around this. They were helpful in understanding functions, while loops, lists & list methods. 
 
 <h3>Final Note</h3>
 
