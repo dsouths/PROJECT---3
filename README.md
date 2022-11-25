@@ -99,7 +99,7 @@ I have also tested the deployed website by purposefully entering incorrect data 
 
 <h2>Media Queries</h2>
 
-As this is a command line interface on a mock terminal there is less need for reponsive design. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
+As this is a command line interface on a mock terminal there is less scope for reponsive design than my last two projects, using Javascript/CSS & HTML. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
 
 <h2>Bugs</h2>
 
