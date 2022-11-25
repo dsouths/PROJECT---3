@@ -49,7 +49,7 @@ I plan to include the following features:
   * max attempts of six 
   * game keeps track of guessed words & guessed letters & informs the player if they have already guessed them
 
-I chose to use a World Cup 22 to separate the hangman game from the many others out there & help create a positive emotional response with the player, & ultimately make the game more fun & entertaining.  Print statements are given when: 
+I have chosen a World Cup 22 theme to separate the hangman game from the many others out there & help create a positive emotional response with the player, & ultimately make the game more fun & entertaining.  Print statements are given when: 
 
 <b>A correct letter is guessed: </b>
 
