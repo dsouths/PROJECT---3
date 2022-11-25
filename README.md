@@ -172,11 +172,11 @@ The website was deployed on Heroku via GitHub by using following steps:
 * <b>martina_mentor - </b>my mentor Martina who was always on hand to answer any questions
 * <b>Code Institute Channel on Slack - </b> I found this a great resource with many knowledgeable people who were more than willing to answer my questions & help out.
 * <b>Youtube</b> - I found a number of tutorials on youtube useful in helping me understand the structure & syntax of Python, including those by MikhailLenko, Kite, 
-Shaun Halverson, MJ Codes & Kylie Ying.  I used these as a basis for my project & built my World Cup 22 edition around this. They were helpful in understanding functions, while loops, lists & list methods such as append. 
+Shaun Halverson, MJ Codes & Kylie Ying.  I used these, in particular, Kite & MikhailLenko, as a basis for my project & built my World Cup 22 edition around this code. They were helpful in understanding functions, while loops, lists & list methods such as append. 
 
 <h3>Final Note</h3>
 
-I found this project challenging, as it was my first experience with Python.  Through perseverance & the aid of my colleagues in the code institute slack channel, reviewing the Python module from Code Institute numerous times,  my mentor Martina, stack overflow threads & youtube tutorials I was able to improve my understanding of Python structure, functions & syntax. I have taken on board feedback from my last project & have tried to employ as much of the advice given a possible namely; improving on git commits, being more concise with my git commits & expanding on validation & tests performed.  Hopefully this shows within this Python project!
+I found this project very challenging, as it was my first experience with Python.  Through perseverance & the aid of my colleagues in the code institute slack channel, reviewing the Python module from Code Institute numerous times,  my mentor Martina, stack overflow threads & youtube tutorials I was able to improve my understanding of Python structure, functions & syntax. I have taken on board feedback from my last project & have tried to employ as much of the advice given a possible namely; improving on git commits, being more concise with my git commits & expanding on validation & tests performed.  Hopefully this shows within this Python project!
 
 Thank you
 
