@@ -16,13 +16,13 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('hangman_words')
 chosen_word = SHEET.worksheet('words')
 
-words_data = chosen_word.get_all_values()
+words_list = chosen_word.get_all_values()
 word = ""
 
 
 # function returns a random word from the word list & in upper
 def pick_word():
-    word = random.choice(words_data)
+    word = random.choice(words_list)
     return word[0].upper()
 
 
