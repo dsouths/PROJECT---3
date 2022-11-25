@@ -2,6 +2,9 @@
 
 <h1>HANGMAN World Cup 22 Edition</h1>
 
+![image](https://user-images.githubusercontent.com/105642587/203990534-858eecfa-7877-4bad-a22b-f82dd8d14c25.png)
+
+
 Click for <b>[Deployed Website](https://hangman-worldcup22-edition.herokuapp.com/)</b>
 
 Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
@@ -12,6 +15,7 @@ Click for <b>[Github](https://github.com/dsouths/PROJECT---3)</b>
    * [UX](#ux)
    * [Features](#features)
    * [Validation](#validation)
+   * [Media Queries](#media-queries)
    * [Bugs](#bugs)
    * [Improvements](#improvements)
    * [Technologies Used](#technologies-used)
@@ -107,7 +111,13 @@ I have also tested the deployed website by purposefully entering incorrect data 
 
 ![image](https://user-images.githubusercontent.com/105642587/203602251-8b61d914-3caa-405c-a7cd-c732e68810d8.png)
 
+<h2>Media Queries</h2>
+
+As this is a command line interface on a mock terminal there is less need for reponsive design. As you can see above the mock terminal/heroku webpage displays well on different devices. I tested this on my own devices, PC, macbook & phone. 
+
 <h2>Improvements</h2>
+
+To improve on the game I would like to add complexity to the game & add a difficulty level function to the game. I would include easy, medium & difficult words to challenge the user. 
 
 <h2>Deployment</h2>
 
@@ -142,7 +152,7 @@ The website was deployed on Heroku via GitHub by using following steps:
 * [Git hub](https://github.com/) - hosting repository
 * [Git pod](https://www.gitpod.io/docs/configure/) - open source developer platform automating the provisioning of ready-to-code developer environments.
 * [Heroku](https://dashboard.heroku.com/) - container-based cloud Platform as a Service (PaaS). Used to deploy, manage, and scale the apps in a mock terminal 
-* [Am I Responsive](https://ui.dev/amiresponsive)
+* [Am I Responsive](https://ui.dev/amiresponsive) - checks if website fits different devices, e.g. tablets, phones, laptops, etc
 * [Stack OverFlow](https://stackoverflow.com/) - a great source of knowledge 
 * [Evernote](https://evernote.com/) - used to store & organise information & screenshots of project
 
